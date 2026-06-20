@@ -1,0 +1,308 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Cairo',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0b1120;
+    color:#ffffff;
+    line-height:1.8;
+}
+
+/* شريط التنقل */
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(11,17,32,.95);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(0,174,255,.2);
+}
+
+.logo-box{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-box h2{
+    font-size:22px;
+}
+
+.nav-logo{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+}
+
+.navbar ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.navbar ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.navbar ul li a:hover{
+    color:#00aeff;
+}
+
+/* الصفحة الرئيسية */
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:60px 20px;
+    background:
+    radial-gradient(circle at top,#0f2b5c,#0b1120 70%);
+}
+
+.hero-logo{
+    width:220px;
+    max-width:80%;
+    margin-bottom:30px;
+    filter:drop-shadow(0 0 25px rgba(0,174,255,.5));
+    transition:.4s;
+}
+
+.hero-logo:hover{
+    transform:scale(1.05);
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.slogan{
+    color:#00aeff;
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:25px;
+}
+
+.hero-text{
+    max-width:850px;
+    font-size:20px;
+    color:#d1d5db;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.btn{
+    padding:14px 35px;
+    background:#00aeff;
+    color:#fff;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 30px rgba(0,174,255,.4);
+}
+
+.btn-outline{
+    background:transparent;
+    border:2px solid #00aeff;
+}
+
+.btn-outline:hover{
+    background:#00aeff;
+}
+
+/* الأقسام */
+.section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    color:#00aeff;
+}
+
+/* البطاقات */
+.card{
+    background:#111827;
+    padding:30px;
+    border-radius:20px;
+    border:1px solid rgba(0,174,255,.15);
+    transition:.4s;
+    margin-bottom:25px;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,174,255,.25);
+}
+
+.card h3{
+    color:#00aeff;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#d1d5db;
+}
+
+/* شبكة البطاقات */
+.cards-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+/* الخدمات */
+.service-box{
+    background:#111827;
+    border-radius:25px;
+    padding:35px;
+    margin-bottom:35px;
+    border:1px solid rgba(0,174,255,.15);
+    transition:.4s;
+}
+
+.service-box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,174,255,.25);
+}
+
+.service-box h3{
+    color:#00aeff;
+    margin-bottom:15px;
+}
+
+.service-box p{
+    color:#d1d5db;
+    margin-bottom:15px;
+}
+
+.service-box ul{
+    padding-right:20px;
+}
+
+.service-box li{
+    margin-bottom:12px;
+    color:#e5e7eb;
+}
+
+/* القوائم */
+.card ul{
+    padding-right:20px;
+}
+
+.card li{
+    margin-bottom:12px;
+    color:#e5e7eb;
+}
+
+/* التذييل */
+footer{
+    background:#050b18;
+    text-align:center;
+    padding:60px 20px;
+    border-top:1px solid rgba(0,174,255,.15);
+}
+
+.footer-logo{
+    width:120px;
+    margin-bottom:20px;
+    filter:drop-shadow(0 0 15px rgba(0,174,255,.5));
+}
+
+footer h2{
+    margin-bottom:20px;
+}
+
+footer p{
+    color:#d1d5db;
+    margin-bottom:10px;
+}
+
+.copyright{
+    margin-top:30px;
+    color:#9ca3af;
+    font-size:14px;
+}
+
+/* شريط تمرير */
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#0b1120;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#00aeff;
+    border-radius:20px;
+}
+
+/* استجابة الجوال */
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .navbar ul{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .slogan{
+        font-size:22px;
+    }
+
+    .hero-text{
+        font-size:17px;
+    }
+
+    .section-title{
+        font-size:30px;
+    }
+
+    .hero-logo{
+        width:170px;
+    }
+
+    .btn{
+        width:100%;
+        max-width:250px;
+    }
+}
